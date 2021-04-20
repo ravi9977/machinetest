@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+.container-flud{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: #007bff;
+  border-color: #007bff;
+  height: 70px;
+}
+
+img {
+  border-radius: 50%;
+   width: 80px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+
+
+.showcard{
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: #ffffff;
+  border-color: #ffffff;
+   margin-top: 30px;
+  
+}
+ .username{
+   margin-top: 20px;
+}
+
+.userdetails{
+   margin-top: 40px;
+}
+.showpagination{
+  margin-top: 40px;
+}
+.form-control{
+  margin-top: 15px; 
+}

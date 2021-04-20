@@ -1,0 +1,65 @@
+<div class="container-flud">
+
+  <div class="row filter-section">
+    <div class="col-md-2 offset-md-2">
+     <input  type="text" placeholder="Sort Users"  class="form-control" (input)="sortByLetter()">
+   </div>
+   <div class="col-md-2 offset-md-2">
+     <input  type="text"  class="form-control" placeholder="Search Users" (input)="searchUsers()">
+   </div>
+ </div>
+</div>
+
+
+<div class="container">
+  <div class="row showpagination">
+  <div class="col-md-4">
+    <h6>Total Result:{{usersList.length}}</h6>
+  </div>
+  
+</div>
+  <div class="row justify-content-start">
+    <div class="col-8">
+      <div class="row showcard" *ngFor="let user of usersList | paginate: { itemsPerPage: 3, currentPage: p }">
+        <!-- <div class="col-md-2"></div> -->
+        <div class="col-md-2">
+         <img src="{{user.avatar_url}}">
+       </div>
+       <div class="col-md-8">
+        <h5 class="username">{{user.login}}</h5> 
+        <p>Profile:{{user.url}}</p>
+
+         <p>UserData :{{user.followers_url}}</p>
+         <p>UserData :{{user.html_url}}</p>
+         
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+              <div class="card card-body">
+                 <p>UserData :{{user.followers_url}}</p>
+                 <p>UserData :{{user.html_url}}</p>
+                   <p>UserData :{{user.followers_url}}</p>
+                  <p>UserData :{{user.html_url}}</p>
+              </div>
+            </div>
+       
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-outline-primary userdetails"  data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Details</button>
+     </div>
+
+
+
+   </div>   
+   
+ </div>
+
+
+
+</div>
+<div class="row showpagination">
+  <div class="col-md-4"></div>
+  <div class="col-md-6">
+ <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+  </div>
+</div>
+</div>
